@@ -1,0 +1,182 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: #ecececdb;
+    font-size: 18px;
+    font-family: "Sora", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: normal;
+    font-style: normal;
+    scroll-behavior: smooth;
+}
+
+nav {
+    background-color: yellow;
+    display: flex;
+    justify-content: space-between;
+    padding: 1rem 2rem;
+    position: sticky;
+    top: 0;
+}
+
+
+nav ul {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+    list-style: none;
+}
+
+nav div img {
+    width: 50px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #191919;
+    font-weight: 600;
+    padding: 8px 0;
+    transition: all;
+    transition-duration: 300ms;
+    border-bottom: 1px solid rgba(255, 68, 0, 0);
+}
+
+nav ul li a:hover {
+    color: black;
+    border-bottom: 1px solid black;
+}
+
+.menu-icon {
+    font-size: 28px;
+    display: none;
+}
+
+.contact{
+    /* position: relative; */
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 50px;
+    margin-top: 50px;
+}
+
+.contact-box{
+    max-width: 860px;
+    display: grid;
+    grid-gap: 10px;
+    grid-template-columns: repeat(2, 1fr);
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background-color: #fff;
+    box-shadow: 0px 0px 18px 5px rgba(0, 0, 0, 0.19);
+    padding: 10px;
+}
+
+
+.left iframe{
+    padding: 10px 10px;
+    width: 100%;
+    height: 470px;
+}
+    .right{
+        padding: 25px 40px;
+
+    }
+
+    h2{
+        /* position: relative; */
+        padding: 0 0 10px;
+        margin-bottom: 10px;
+    }
+
+
+.field{
+    width: 100%;
+    border: 2px solid rgba(0, 0, 0, 0);
+    outline: none;
+    padding:  .5rem 1rem;
+    margin-bottom: 22px;
+    background-color: rgba(230, 230, 230, 0.6);
+    transition:  .3s;
+}
+
+.field:hover{
+    background-color: rgba(0, 0, 0, 0.1);
+}
+
+textarea{
+    min-height: 150px;
+}
+
+.btn{
+    width: 100%;
+    padding: .5rem 1rem;
+    background: yellow;
+    color: black;
+    font-size: 1.1rem;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    transition: .3s;
+}
+
+.btn:hover{
+    background-color: rgba(0, 0, 0, 0.1);
+}
+
+footer{
+    background: yellow;
+    text-align: center;
+    padding: 10px 0;
+    margin-top: 50px;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 2.5rem;
+}
+
+@media only screen and (max-width: 768px){
+    nav {
+        flex-wrap: wrap;
+        position: fixed;
+        width: 100%;
+        top: 0;
+    }
+    
+    section{
+        padding: 90px 4% 70px;
+    }
+    nav ul {
+        flex-direction: column;
+        width: 100%;
+    }
+    
+    nav ul li:last-of-type {
+        padding-bottom: 8px;
+    }
+    
+    nav ul.hidden {
+        display: none;
+    }
+    
+    .menu-icon {
+        display: flex;
+        align-items: center;
+    }
+
+    .contact-box{
+        grid-template-columns: 1fr;
+    }
+
+    .left iframe{
+        padding: 0;
+    }
+}

@@ -12,7 +12,6 @@ body{
     font-optical-sizing: auto;
     font-weight: normal;
     font-style: normal;
-    scroll-behavior: smooth;
 }
 
 nav {
@@ -56,95 +55,15 @@ nav ul li a:hover {
     display: none;
 }
 
-section{
-    padding: 90px 14% 70px;
-    /* padding: 2rem 9%; */
-    margin: 0;
-}
-
-.hero {
-    width: 100%;
-    height: 100vh;
-    background:  url(/pic/hero1.jpg);
-    background-position: center;
-    background-size: cover;
-    display: flex;
-    align-items: center;
-    justify-content: flex-start;
-}
-
-.hero-text{
-    padding-top: 60px;
-}
-
-.hero-text h1{
-    font-weight: 700;
-    line-height: 1.1;
-    margin-bottom: 20px;
-    /* font-size: 100px; */
-}
-
-.hero-text h6{
-    font-size: 15px;
-    font-weight: 500;
-    letter-spacing: 3px;
-    text-transform: uppercase;
-    margin-bottom: 10px;
-}
-
-.hero-text p{
-    width: 100%;
-    max-width: 560px;
-    font-weight: 400;
-    line-height: 33px;
-    margin-bottom: 35px;
-}
-
-.story .our-story h4{
-    display: flex;
-    flex-direction: column;
-    flex-wrap: wrap;
-    padding: 0.5rem;
-    justify-content: center;
-    align-items: center;
-    gap: 0.2rem;
-    font-size: 2rem;
-    font-weight: 700;
-    margin-top: 3rem;
-    line-height: 2.5;
-    color: var(--green-dark);
-    word-wrap: break-word;
-}
-
-
-.content-story {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    padding: 20px;
-}
-
-.story .our-story .content-story .image {
-    flex: 1 1 30rem;
-    margin-right: 15px;
-    float: left;
-}
-
-.story .our-story .content-story img {
-    display: flex;
-    width: 80%;
-    max-width: 100%;
-    border-radius: 3rem;
-    margin: 20 auto;
-}
-
-
 .title{
     justify-content: center;
     display: flex;
     font-size: 2rem
 }
 
+.menu{
+    padding-top: 30px;
+}
 .card-list {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
@@ -198,7 +117,6 @@ section{
     display: flex;
     align-items: center;
     justify-content: center;
-    transform: rotate(-35deg);
     height: 40px;
     width: 40px;
     color: #000;
@@ -232,22 +150,16 @@ footer{
 }
 
 @media only screen and (max-width: 768px){
-    html{
-        width: 100%;
-    }
     nav {
         flex-wrap: wrap;
         position: fixed;
         width: 100%;
         top: 0;
     }
-    .hero{
-        width: 100%;
-    }
+    
     section{
-        padding: 60px 4% 70px;
+        padding: 90px 4% 70px;
     }
-
     nav ul {
         flex-direction: column;
         width: 100%;
@@ -265,25 +177,8 @@ footer{
         display: flex;
         align-items: center;
     }
-    
-    label{
-        display: block;
-        cursor: pointer;
-    }
     .card-list {
         margin: 0 auto;
-    }
-
-    .content-story {
-        flex-direction: column;
-        height: 440px;
-        justify-content: center;
-        align-items: center;
-    }
-    
-    .image-container,
-    .text-container {
-        width: 100%;
     }
 
 }
