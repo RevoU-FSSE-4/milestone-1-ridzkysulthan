@@ -1,0 +1,190 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: #ecececdb;
+    font-size: 18px;
+    margin: 0px;
+    font-family: "Sora", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: normal;
+    font-style: normal;
+}
+
+nav {
+    background-color: yellow;
+    display: flex;
+    justify-content: space-between;
+    padding: 1rem 2rem;
+    position: sticky;
+    top: 0;
+}
+
+
+nav ul {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+    list-style: none;
+}
+
+nav div img {
+    width: 50px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #191919;
+    font-weight: 600;
+    padding: 8px 0;
+    transition: all;
+    transition-duration: 300ms;
+    border-bottom: 1px solid rgba(255, 68, 0, 0);
+}
+
+nav ul li a:hover {
+    color: black;
+    border-bottom: 1px solid black;
+}
+
+.menu-icon {
+    font-size: 28px;
+    display: none;
+}
+
+.header{
+    display: grid;
+    margin: 50px;
+    grid-template-areas: 
+    'hero hero feature-1'
+    'hero hero feature-2';
+}
+
+.hero{
+    grid-area: hero;
+    min-height: 300px;
+    background-image: url(/pic/hero.jpg);
+    background-size: cover;
+    background-position: center;
+    padding: 50px;
+}
+
+.hero > *{
+    /* display: none; */
+    color: yellow;
+    text-shadow: 2px 2px black;
+    
+}
+
+.features{
+    background-color: black;
+    color: yellow;
+    display: grid;
+    /* justify-content: center; */
+    place-content: center;
+    text-align: center;
+    cursor: pointer;
+    text-shadow: 2px 2px black;
+}
+
+.feature-1{
+    grid-area: feature-1;
+    background-image: url(/pic/pisangcoklat2.png);
+    background-size: cover;
+}
+
+.feature-2{
+    grid-area: feature-2;
+    background-image: url(/pic/pisangkeju2.png);
+    background-size: cover;
+}
+
+.features .price{
+    font-size: 3em;
+    font-weight: bold;
+}
+
+.about{
+    padding: 50px;
+    padding-top: 20px;
+}
+
+.about h2{
+    padding-bottom: 10px;
+}
+
+
+@media only screen and (max-width: 768px){
+    nav {
+        flex-wrap: wrap;
+        position: fixed;
+        width: 100%;
+        top: 0;
+    }
+    
+    section{
+        padding: 60px 4% 70px;
+    }
+
+    nav ul {
+        flex-direction: column;
+        width: 100%;
+    }
+    
+    nav ul li:last-of-type {
+        padding-bottom: 8px;
+    }
+    
+    nav ul.hidden {
+        display: none;
+    }
+    
+    .menu-icon {
+        display: flex;
+        align-items: center;
+    }
+    
+        .header{
+            grid-template-areas: 
+            'hero'
+            'feature-1'
+            'feature-2'
+            ;
+        }
+        
+        .nav-list{
+            text-align: center;
+            width: 100%;
+            display: none;
+            background-color: yellow;
+        }
+        .nav-list a{
+            display: block;
+            border-bottom: 1px;
+            margin: 0;
+        }
+        #toggle:checked + .nav-list{
+            display: block;
+        }
+    
+        .grid-container {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            grid-gap: 8px;
+            grid-auto-rows: 240px 240px 240px;
+        }
+        
+        .grid-container img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        
+        .grid-container #item-1 {
+            grid-column: 1 / 2 span;
+            grid-row: 2;
+        }
+    }
