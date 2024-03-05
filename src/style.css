@@ -100,6 +100,9 @@ section{
     margin-bottom: 35px;
 }
 
+.our-story h4{
+    font-size: 2rem;
+}
 .story .our-story h4{
     display: flex;
     flex-direction: column;
